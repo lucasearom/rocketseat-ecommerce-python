@@ -55,6 +55,16 @@ def logout():
     logout_user()
     return jsonify({ "message": "Logout successfully" })
 
+@app.route("/api/user/add", methods=["POST"])
+def add_user():
+    data = request.json
+    if "username" in data and "password" in data:
+        user = User(username=data["username"], password=data["password"])
+        db.session.add(user)
+        db.session.commit()
+        return jsonify({ "message": "User created successfully" })
+    return jsonify({ "message": "Invalid user data" }), 400
+
 @app.route("/api/products/add", methods=["POST"])
 @login_required
 def add_product():
