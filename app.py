@@ -121,5 +121,15 @@ def get_products():
         product_list.append(product_data)
     return jsonify(product_list)
 
+@app.route("/api/cart/add/<int:product_id>", methods=["POST"])
+@login_required
+def add_to_cart(product_id):
+    user = User.query.get(int(current_user.id))
+    product = Product.query.get(product_id)
+
+    if user and product:
+        return jsonify({ "message": "Item added to the cart successfully" })
+    return jsonify({ "message": "Failed to add item to the cart" }), 400
+
 if __name__ == "__main__":
     app.run(debug=True)
