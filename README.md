@@ -1,23 +1,25 @@
+<h1 align="center">E-commerce API 🛒</h1>
+
 ### 📖 Descrição do projeto
 
 Este projeto é uma aplicação de e-commerce desenvolvida em Python utilizando o framework Flask. A aplicação permite o gerenciamento de usuários, produtos e um carrinho de compras. Os usuários podem se cadastrar, fazer login, adicionar produtos ao carrinho, remover produtos e realizar checkout.
 
 ### ⚙ Como rodar localmente
 
-# 1. Clone o repositório:
+#### 1. Clone o repositório:
 
 ```
 git clone https://github.com/lucasearom/rocketseat-ecommerce-python.git
 cd rocketseat-ecommerce-python
 ```
 
-# 2. Instale as dependências:
+#### 2. Instale as dependências:
 
 ```
 pip install -r requirements.txt
 ```
 
-# 3. Inicie a aplicação:
+#### 3. Inicie a aplicação:
 
 ```
 python app.py
